@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>Form Tag</title>
+</head>
+
+<body>
+
+    <h2>Student Application Form</h2>
+    <form method="GET">
+        <fieldset>
+            <legend>Student Details</legend>
+            <table>
+                <tr>
+                    <td>
+                        <lable for="fName">Enter Full Name:</lable>
+                    </td>
+                    <td><input type="text" name="fullname" id="fName" required /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <lable for="pwd">password:</lable>
+                    </td>
+                    <td><input type="password" name="password" id="pwd" required minlength="6" maxlength="10" /></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <lable for="gender">Gender</lable>
+                    </td>
+                    <td><input type="radio" id="male" name="gender" />male</td>
+                </tr>
+                <td><input type="radio" id="female" name="gender" />female</td>
+                <tr>
+                    <td>Enter Pincode:</td>
+                    <td><input type="number" id="nbr" name="pincode" min="100000" max="999999" /></td>
+                    </tr>
+                    <tr>
+                    <td>Enter Phone:</td>
+                    <td><input type="text" id="phNbr" name="phNbr" pattern="[0-9]{10}" /></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Select One or More Hobby</legend>
+            <input type="checkbox" id="cricket" />Criket<br />
+            <input type="checkbox" id="football" />Football<br />
+            <input type="checkbox" id="kabhaddi" />Kabhaddi<br />
+            <lable for="emailID">Email</lable>
+            <input tyoe="email" id="emailID" /><br />
+
+            <lable for="selCourse">Select or Provide Your Course</lable>
+            <input type="text" list="Courses" id="selcourse" />
+            <datalist id="courses">
+                <option>AWS</option>
+                <option>FSD</option>
+                <option>Networking</option>
+                <datalist><br />
+
+                    <lable for="selfRate">Self Rate Yourself</lable>
+                    <input type="range" min="1" max="5" step="1" /><br />
+
+                    <lable for="qualification">Qualification</lable>
+                    <Select id="qualification" multiple>
+                        <option>MBA</option>
+                        <Option>BTECH</Option>
+                        <option>MCA</option>
+                        <option>BSC</option>
+                        <option>BCA</option>
+                    </Select><br />
+
+                    <textarea rows="5" cols="50"></textarea><br />
+
+                    <input type="submit" value="Apply" /><input type="reset" value="Clear" />
+                    
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
